@@ -6,8 +6,8 @@ const SideBar = () => {
         <div>
             <div className="card side-bar-card shadow border-0">
                 <div className="side-card-body">
-                    <div className="side-link-body">
-                        <FaTachometerAlt style={{fontSize: '1em', marginRight: '3px'}} />{' '}
+                    <div className="side-link-container">
+                        <FaTachometerAlt style={{fontSize: '1em', marginRight: '10px'}} />
                         <span className="side-link-text">DashBoard</span>
                     </div>
                 </div>
