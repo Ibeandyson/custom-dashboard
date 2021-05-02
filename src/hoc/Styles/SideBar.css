@@ -3,19 +3,20 @@
     border-radius: 0%;
     position: fixed;
     width: 17vw;
-    background-color: blue;
+    background-color:#355a92;
     z-index: inherit;
 }
 .side-card-body {
     margin-top: 50%;
-    padding: 10px;
 }
-
-.side-link-container {
-    padding-top: 10px;
+.side-link-container{
+  margin-bottom: 30px;
+  cursor: pointer;
+  padding-left: 40px;
 }
 .side-link-text {
     text-align: center;
-    font-size: 0.9em;
+    font-size: 0.8em;
     font-weight: bold;
+    color: #ffffff;
 }
