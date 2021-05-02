@@ -1,25 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import {Header, PageViewer, SideBar} from './hoc/index';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <Header />
+
+            <div className="row">
+                <div className="col-2">
+                    <SideBar />
+                </div>
+                <div className="col-10">
+                    <PageViewer />
+                </div>
+            </div>
+        </div>
+    );
 }
 
 export default App;
