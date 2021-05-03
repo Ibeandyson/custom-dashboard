@@ -1,6 +1,8 @@
 import './Styles/SideBar.css';
-import {FaTachometerAlt, FaUserLock, FaUserTie, FaCog, FaUserSlash} from 'react-icons/fa';
+import {FaTachometerAlt, FaRegMoneyBillAlt , FaUserLock, FaUserTie, FaCog, FaUserSlash} from 'react-icons/fa';
 import {ImUsers, ImUserPlus} from 'react-icons/im';
+import {GiReceiveMoney, GiPayMoney} from "react-icons/gi"
+import {GrMoney} from "react-icons/gr"
 
 const SideBar = () => {
     return (
@@ -26,6 +28,18 @@ const SideBar = () => {
                     <div className="side-link-container">
                         <ImUserPlus style={{fontSize: '1em', marginRight: '10px', color: '#ffffff'}} />
                         <span className="side-link-text">Add Use</span>
+                    </div>
+                    <div className="side-link-container">
+                        <GiPayMoney style={{fontSize: '1em', marginRight: '10px', color: '#ffffff'}} />
+                        <span className="side-link-text">Active Investment</span>
+                    </div>
+                    <div className="side-link-container">
+                        <GiReceiveMoney style={{fontSize: '1em', marginRight: '10px', color: '#ffffff'}} />
+                        <span className="side-link-text">Compeleted Investment</span>
+                    </div>
+                    <div className="side-link-container">
+                        <FaRegMoneyBillAlt style={{fontSize: '1em', marginRight: '10px', color: '#ffffff'}} />
+                        <span className="side-link-text">Withdrawal</span>
                     </div>
                     <div className="side-link-container">
                         <FaUserTie style={{fontSize: '1em', marginRight: '10px', color: '#ffffff'}} />

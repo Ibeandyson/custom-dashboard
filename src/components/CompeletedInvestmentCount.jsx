@@ -1,7 +1,7 @@
 const CompeletedInvestmentCount = () => {
   return (
       <div>
-          <div class="card border-0" style={{backgroundColor: '#f5fbcd'}}>
+          <div class="card border-0" style={{backgroundColor: '#929557'}}>
               <div class="card-body">
                   <h5 class="card-title" style={{fontSize: '1em', fontWeight: 'bolder'}}>
                       Compeleted Investment
