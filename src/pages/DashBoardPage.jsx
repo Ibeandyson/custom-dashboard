@@ -1,4 +1,4 @@
-import {ActiveUsersCount, PendingUsersCount, BlockedUsersCount, ActiveInvestmentCount, CompeletedInvestmentCount} from '../components/index';
+import {ActiveUsersCount, PendingUsersCount, BlockedUsersCount, ActiveInvestmentCount, CompeletedInvestmentCount, WithdrawalsCount} from '../components/index';
 const DashBoardPage = () => {
     return (
         <div>
@@ -17,6 +17,9 @@ const DashBoardPage = () => {
                 </div>
                 <div className="col-xs-12 col-md-6 col-lg-4  py-2 px-2">
                     <CompeletedInvestmentCount/>
+                </div>
+                <div className="col-xs-12 col-md-6 col-lg-4  py-2 px-2">
+                    <WithdrawalsCount/>
                 </div>
             </div>
         </div>
