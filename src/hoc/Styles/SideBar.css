@@ -3,16 +3,24 @@
     border-radius: 0%;
     position: fixed;
     width: 17vw;
-    background-color:#355a92;
+    background-color: #355a92;
     z-index: inherit;
 }
 .side-card-body {
     margin-top: 50%;
 }
-.side-link-container{
-  margin-bottom: 30px;
-  cursor: pointer;
-  padding-left: 40px;
+.side-link-container {
+    margin-bottom: 30px;
+    cursor: pointer;
+    padding-left: 40px;
+}
+:hover.side-link-container {
+    background-color: #c5c4c4;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin-left: 20px;
+    height: 50px;
+    padding: 10px;
 }
 .side-link-text {
     text-align: center;
