@@ -1,12 +1,11 @@
 import {useState, useEffect} from 'react';
+import {DashBoardPage} from '../pages/index';
 
 const PageViewer = () => {
     return (
-        <div>
-            <p>This is page viewer</p>
+        <div className="container-fluid" style={{marginTop: '10%'}}>
+            <DashBoardPage />
         </div>
     );
 };
 export default PageViewer;
-
-
