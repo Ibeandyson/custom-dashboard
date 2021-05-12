@@ -3,7 +3,7 @@
     border-radius: 0%;
     position: fixed;
     width: 17vw;
-    background-color: #355a92;
+    background-color: rgb(47, 151, 47);
     z-index: inherit;
 }
 .side-card-body {
