@@ -1,19 +1,21 @@
 import './App.css';
-import {Header, PageViewer, SideBar} from './hoc/index';
+import Components from "./Components"
+import Login  from "./Auth/Loging"
+import PrivateRoute from "./PrivateRoute"
+import {
+	BrowserRouter as Router,
+	Route,
+	Switch,
+
+} from "react-router-dom";
+import { Provider } from "react-redux";
+import store from "./Redux/store"
 
 function App() {
     return (
         <div className="App">
-            <Header />
-
-            <div className="row">
-                <div className="col-2  d-none d-lg-block">
-                    <SideBar />
-                </div>
-                <div className="col-xs-12 col-lg-10">
-                    <PageViewer />
-                </div>
-            </div>
+            <Login/>
+           {/* <Components/> */}
         </div>
     );
 }
