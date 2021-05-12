@@ -1,1 +1,5 @@
 export {default as DashBoardPage} from "./DashBoardPage"
+export {default as AddUser} from "./AddUser"
+export {default as ActiveInvestmentPage} from "./ActiveInvestmentPage"
+export {default as CompletedInvestmentPage} from "./CompletedInvestmentPage"
+export {default as WithdrawPage} from "./WithdrawPage"

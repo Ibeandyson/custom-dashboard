@@ -7,10 +7,10 @@ function App() {
             <Header />
 
             <div className="row">
-                <div className="col-2">
+                <div className="col-2  d-none d-lg-block">
                     <SideBar />
                 </div>
-                <div className="col-10">
+                <div className="col-xs-12 col-lg-10">
                     <PageViewer />
                 </div>
             </div>
