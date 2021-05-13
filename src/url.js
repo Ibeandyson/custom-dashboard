@@ -1,3 +1,3 @@
-const url = 'https://dry-sands-08402.herokuapp.com';
+const url = 'https://idealpeoplecorp.com';
 
 module.exports = url;
