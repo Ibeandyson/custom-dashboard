@@ -6,7 +6,6 @@ import Cookie from "js-cookie"
 
 import {
     userSigninReducer,
-    userSignupReducer
 } from './reducers'
 
 
@@ -24,7 +23,6 @@ export const initialState = {
 const  reducers = combineReducers({
      //USER STORE
      userSignin: userSigninReducer, 
-     userSignup: userSignupReducer
 })
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

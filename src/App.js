@@ -13,7 +13,7 @@ function App() {
             <Router>
                 <Switch>
                     <Route exact path="/" component={Login} />
-                    <Route  path="/admin_dashboard" component={Components} />
+                    <PrivateRoute  path="/admin_dashboard" component={Components} />
                     <Route component={Page404} />
                 </Switch>
             </Router>

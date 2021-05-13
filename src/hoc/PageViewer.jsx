@@ -9,12 +9,12 @@ const PageViewer = () => {
         <div className="container-fluid mt-5">
             <Router>
                 <Switch>
-                    <Route exact  path="/admin_dashboard/dashboard_overview" component={DashBoardPage}/>
-                    <Route exact path="/admin_dashboard/add_user" component={AddUser}/>
-                    <Route exact path="/admin_dashboard/active_investment" component={ActiveInvestmentPage}/>
-                    <Route exact path="/admin_dashboard/completed_investment" component={CompletedInvestmentPage}/>
-                    <Route exact path="/admin_dashboard/withdraw" component={WithdrawPage}/>
-                    <Route exact path="/admin_dashboard/active_users" component={ActiveUsersPage}/>
+                    <PrivateRoute exact  path="/admin_dashboard/dashboard_overview" component={DashBoardPage}/>
+                    <PrivateRoute exact path="/admin_dashboard/add_user" component={AddUser}/>
+                    <PrivateRoute exact path="/admin_dashboard/active_investment" component={ActiveInvestmentPage}/>
+                    <PrivateRoute exact path="/admin_dashboard/completed_investment" component={CompletedInvestmentPage}/>
+                    <PrivateRoute exact path="/admin_dashboard/withdraw" component={WithdrawPage}/>
+                    <PrivateRoute exact path="/admin_dashboard/active_users" component={ActiveUsersPage}/>
                     <Route component={Page404} />
                 </Switch>
             </Router>
