@@ -1,12 +1,12 @@
 const Withdraw = () => {
-  return(
-    <div>
-     <div class="pt-5">
-                <div class="card my-card-look">
-                <div class="card-header my-card-head my-card-head-text">Withdraw</div>
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table table-bordered">
+    return (
+        <div>
+            <div className="pt-5">
+                <div className="card my-card-look">
+                    <div className="card-header my-card-head my-card-head-text">Withdraw</div>
+                    <div className="card-body">
+                        <div className="table-responsive">
+                            <table className="table table-bordered">
                                 <thead>
                                     <tr>
                                         <th scope="col">Code</th>
@@ -28,7 +28,7 @@ const Withdraw = () => {
                     </div>
                 </div>
             </div>
-    </div>
-  )
-}
+        </div>
+    );
+};
 export default Withdraw;

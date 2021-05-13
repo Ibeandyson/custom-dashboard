@@ -9,7 +9,7 @@ import {
 
 const DashBoardPage = () => {
     return (
-        <div>
+        <div className="pt-5">
             <div className="row">
                 <div className="col-xs-12 col-md-6 col-lg-4 py-2 px-2">
                     <ActiveUsersCount />
