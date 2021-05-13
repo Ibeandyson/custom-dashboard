@@ -1,21 +1,22 @@
 import './App.css';
-import Components from "./Components"
-import Login  from "./Auth/Loging"
-import PrivateRoute from "./PrivateRoute"
-import {
-	BrowserRouter as Router,
-	Route,
-	Switch,
-
-} from "react-router-dom";
-import { Provider } from "react-redux";
-import store from "./Redux/store"
+import Components from './Components';
+import Login from './Auth/Loging';
+import Page404 from './404';
+import PrivateRoute from './PrivateRoute';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import {Provider} from 'react-redux';
+import store from './Redux/store';
 
 function App() {
     return (
         <div className="App">
-            <Login/>
-           {/* <Components/> */}
+            <Router>
+                <Switch>
+                    <Route exact path="/" component={Login} />
+                    <Route exact path="/admin_dashboard" component={Components} />
+                    <Route component={Page404} />
+                </Switch>
+            </Router>
         </div>
     );
 }

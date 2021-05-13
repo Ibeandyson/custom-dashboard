@@ -11,7 +11,7 @@ const Login = () => {
                         <label style={{fontSize: '0.8em', fontWeight: 'bold'}}>Email</label>
                         <input className="form-control form-control-sm" type="email" placeholder="enter email" />
                         <label className="pt-3" style={{fontSize: '0.8em', fontWeight: 'bold'}}>Password</label>
-                        <input className="form-control form-control-sm" type="password" placeholder="enter Password" />
+                        <input className="form-control form-control-sm" type="password" placeholder="enter password" />
                         <div className="pt-3" style={{float: "right"}}>
                             <button type="button" className="btn btn-success">
                                 Login
