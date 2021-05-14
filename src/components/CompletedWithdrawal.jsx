@@ -1,12 +1,12 @@
 import {useState, useEffect} from 'react';
-import PendingWithdrawalTable from './subcomponent/PendingWithdrawalTable';
+import CompletedWithdrawalTable from './subcomponent/CompletedWithdrawalTable';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import axios from 'axios';
 import {useSelector} from 'react-redux';
 import Preloader from '../Preloader';
 import url from '../url';
 
-const PendingWithdrawal= () => {
+const CompletedWithdrawal = () => {
     const [loading, setLoading] = useState(false);
     const [withdrawaldata, setwithdrawaldata] = useState([]);
     const [nexturl, setNexturl] = useState('');
@@ -15,10 +15,10 @@ const PendingWithdrawal= () => {
     const userSignin = useSelector(state => state.userSignin);
     const {user} = userSignin;
 
-    const loadActiveInvestmentData = () => {
+    const loadData = () => {
         setLoading(true);
         axios
-            .get(`${url}/api/admin/withdrawal/list/pending`, {
+            .get(`${url}/api/admin/withdrawal/list/completed`, {
                 headers: {
                     Authorization: `Bearer ${user}`,
                     'Content-Type': 'application/json',
@@ -55,14 +55,14 @@ const PendingWithdrawal= () => {
     };
 
     useEffect(() => {
-        loadActiveInvestmentData();
+      loadData();
     }, []);
     return (
         <div>
             {loading && <Preloader />}
             <div class="pt-5">
                 <div class="card my-card-look">
-                    <div class="card-header my-card-head my-card-head-text">Pending Withdrawal</div>
+                    <div class="card-header my-card-head my-card-head-text">Completed Withdrawal</div>
                     <div class="card-body">
                         <div class="table-responsive">
                             <table class="table table-bordered">
@@ -75,7 +75,7 @@ const PendingWithdrawal= () => {
                                     </tr>
                                 </thead>
 
-                                <tbody>{withdrawaldata.map(data => <PendingWithdrawalTable data={data} />)}</tbody>
+                                <tbody>{withdrawaldata.map(data => <CompletedWithdrawalTable data={data} />)}</tbody>
                                 <InfiniteScroll
                                     dataLength={withdrawaldata.length}
                                     next={nextData}
@@ -91,4 +91,4 @@ const PendingWithdrawal= () => {
     );
 };
 
-export default PendingWithdrawal;
+export default CompletedWithdrawal;
