@@ -15,7 +15,7 @@ const PendingWithdrawal= () => {
     const userSignin = useSelector(state => state.userSignin);
     const {user} = userSignin;
 
-    const loadActiveInvestmentData = () => {
+    const loadData = () => {
         setLoading(true);
         axios
             .get(`${url}/api/admin/withdrawal/list/pending`, {
@@ -55,7 +55,7 @@ const PendingWithdrawal= () => {
     };
 
     useEffect(() => {
-        loadActiveInvestmentData();
+        loadData();
     }, []);
     return (
         <div>
@@ -72,10 +72,11 @@ const PendingWithdrawal= () => {
                                         <th scope="col">Status</th>
                                         <th scope="col">Amount</th>
                                         <th scope="col">Created At</th>
+                                        <th scope="col">Action</th>
                                     </tr>
                                 </thead>
 
-                                <tbody>{withdrawaldata.map(data => <PendingWithdrawalTable data={data} />)}</tbody>
+                                <tbody>{withdrawaldata.map(data => <PendingWithdrawalTable data={data} loadData={loadData} />)}</tbody>
                                 <InfiniteScroll
                                     dataLength={withdrawaldata.length}
                                     next={nextData}

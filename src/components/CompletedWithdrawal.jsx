@@ -72,10 +72,11 @@ const CompletedWithdrawal = () => {
                                         <th scope="col">Status</th>
                                         <th scope="col">Amount</th>
                                         <th scope="col">Created At</th>
+                                        <th scope="col">Action</th> 
                                     </tr>
                                 </thead>
 
-                                <tbody>{withdrawaldata.map(data => <CompletedWithdrawalTable data={data} />)}</tbody>
+                                <tbody>{withdrawaldata.map(data => <CompletedWithdrawalTable  data={data} />)}</tbody>
                                 <InfiniteScroll
                                     dataLength={withdrawaldata.length}
                                     next={nextData}
