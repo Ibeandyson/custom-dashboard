@@ -9,4 +9,5 @@ export {default as ActiveInvestment} from './ActiveInvestment';
 export {default as CompletedInvestment} from './CompletedInvestment';
 export {default as PendingWithdrawal} from './PendingWithdrawal'; 
 export {default as CompletedWithdrawal} from './CompletedWithdrawal'; 
+export {default as FailedWithdrawal} from './FailedWithdrawal';
 export {default as ActiveUsers} from './ActiveUsers';
