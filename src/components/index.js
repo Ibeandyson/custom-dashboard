@@ -11,3 +11,5 @@ export {default as PendingWithdrawal} from './PendingWithdrawal';
 export {default as CompletedWithdrawal} from './CompletedWithdrawal'; 
 export {default as FailedWithdrawal} from './FailedWithdrawal';
 export {default as ActiveUsers} from './ActiveUsers';
+export {default as CompletedDeposit} from './CompletedDeposit';
+export {default as FailedDeposit} from './FailedDeposit';

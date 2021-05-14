@@ -20,8 +20,8 @@ const CompletedithdrawalTable = props => {
                     </button>
                 </div>
             </td>
-                  {/* =======  View users modal ======= */}
-                  <div
+            {/* =======  View users modal ======= */}
+            <div
                 class="modal fade"
                 id="user"
                 tabindex="-1"
@@ -40,23 +40,23 @@ const CompletedithdrawalTable = props => {
                         </div>
                         <div class="modal-body">
                             <div>
-                                <span style={{fontSize: '0.7em', fontWeight: "bold"}} className="mr-3">
-                                 Name:
+                                <span style={{fontSize: '0.7em', fontWeight: 'bold'}} className="mr-3">
+                                    Name:
                                 </span>
                                 <span style={{fontSize: '0.7em'}} className="">
                                     {props.data.user.first_name} {props.data.user.last_name}
                                 </span>
                             </div>
-                            <hr/>
+                            <hr />
                             <div>
-                                <span style={{fontSize: '0.7em', fontWeight: "bold"}} className="mr-3">
-                                 Email:
+                                <span style={{fontSize: '0.7em', fontWeight: 'bold'}} className="mr-3">
+                                    Email:
                                 </span>
                                 <span style={{fontSize: '0.7em'}} className="">
-                                    {props.data.user.email} 
+                                    {props.data.user.email}
                                 </span>
                             </div>
-                            <hr/>
+                            <hr />
                         </div>
                     </div>
                 </div>

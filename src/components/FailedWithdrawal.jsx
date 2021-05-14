@@ -72,6 +72,7 @@ const FailedWithdrawal = () => {
                                         <th scope="col">Status</th>
                                         <th scope="col">Amount</th>
                                         <th scope="col">Created At</th>
+                                        <th scope="col">Action</th>
                                     </tr>
                                 </thead>
 

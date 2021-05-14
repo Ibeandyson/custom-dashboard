@@ -1,24 +1,24 @@
 import {useState, useEffect} from 'react';
-import ActiveInvestmentTable from './subcomponent/ActiveInvestmentTable';
+import CompletedDepositTable from './subcomponent/CompletedDepositTable';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import axios from 'axios';
 import {useSelector} from 'react-redux';
 import Preloader from '../Preloader';
 import url from '../url';
 
-const ActiveInvestment = () => {
+const CompletedDeposit = () => {
     const [loading, setLoading] = useState(false);
-    const [investmentdata, setInvestmentdata] = useState([]);
+    const [withdrawaldata, setwithdrawaldata] = useState([]);
     const [nexturl, setNexturl] = useState('');
 
     //======USER GLOBAL STATE FROM REDUX
     const userSignin = useSelector(state => state.userSignin);
     const {user} = userSignin;
 
-    const loadActiveInvestmentData = () => {
+    const loadData = () => {
         setLoading(true);
         axios
-            .get(`${url}/api/admin/investment/list/active`, {
+            .get(`${url}/api/admin/deposit/list/completed`, {
                 headers: {
                     Authorization: `Bearer ${user}`,
                     'Content-Type': 'application/json',
@@ -26,8 +26,8 @@ const ActiveInvestment = () => {
                 }
             })
             .then(res => {
-                setInvestmentdata(res.data.investments.data);
-                setNexturl(res.data.investments.next_page_url);
+                setwithdrawaldata(res.data.deposits.data);
+                setNexturl(res.data.withdrawals.next_page_url);
                 console.log('data', res);
                 setLoading(false);
             })
@@ -49,39 +49,38 @@ const ActiveInvestment = () => {
                 }
             })
             .then(res => {
-                setNexturl(res.data.investments.next_page_url);
-                setInvestmentdata(investmentdata.concat(...res.data.investments.data) );
+                setNexturl(res.data.deposits.next_page_url);
+                setwithdrawaldata(withdrawaldata.concat(...res.data.deposits.data) );
             });
     };
 
     useEffect(() => {
-        loadActiveInvestmentData();
+      loadData();
     }, []);
     return (
         <div>
             {loading && <Preloader />}
             <div class="pt-5">
                 <div class="card my-card-look">
-                    <div class="card-header my-card-head my-card-head-text">Active Investmwnt</div>
+                    <div class="card-header my-card-head my-card-head-text">Completed Deposit</div>
                     <div class="card-body">
                         <div class="table-responsive">
                             <table class="table table-bordered">
                                 <thead>
                                     <tr>
                                         <th scope="col">Code</th>
-                                        <th scope="col">Package</th>
-                                        <th scope="col">ROI</th>
+                                        <th scope="col">Status</th>
                                         <th scope="col">Amount</th>
                                         <th scope="col">Created At</th>
                                         <th scope="col">Action</th>
                                     </tr>
                                 </thead>
 
-                                <tbody>{investmentdata.map(data => <ActiveInvestmentTable data={data} />)}</tbody>
+                                <tbody>{withdrawaldata.map(data => <CompletedDepositTable data={data} />)}</tbody>
                                 <InfiniteScroll
-                                    dataLength={investmentdata.length}
+                                    dataLength={withdrawaldata.length}
                                     next={nextData}
-                                    hasMore={investmentdata.current_page === investmentdata.last_page ? true : false}
+                                    hasMore={withdrawaldata.current_page === withdrawaldata.last_page ? true : false}
                                     endMessage={<p style={{textAlign: 'center'}} />}
                                 />
                             </table>
@@ -93,4 +92,4 @@ const ActiveInvestment = () => {
     );
 };
 
-export default ActiveInvestment;
+export default CompletedDeposit ;
