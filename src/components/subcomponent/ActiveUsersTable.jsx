@@ -34,7 +34,7 @@ const ActiveUsersTable = () => {
                 </div>
             </div>
             {/* =======  View users modal ======= */}
-            <div
+            {/* <div
                 class="modal fade"
                 id="exampleModalCenter"
                 tabindex="-1"
@@ -62,7 +62,7 @@ const ActiveUsersTable = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
             {/* =======  View users modal ======= */}
         </div>
     );

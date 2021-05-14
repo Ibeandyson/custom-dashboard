@@ -7,5 +7,5 @@ export {default as WithdrawalsCount} from './WithdrawalsCount';
 export {default as UserForm} from './UserForm';
 export {default as ActiveInvestment} from './ActiveInvestment';
 export {default as CompletedInvestment} from './CompletedInvestment';
-export {default as Withdraw} from './Withdraw'; 
+export {default as PendingWithdrawal} from './PendingWithdrawal'; 
 export {default as ActiveUsers} from './ActiveUsers';

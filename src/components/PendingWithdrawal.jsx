@@ -1,14 +1,14 @@
 import {useState, useEffect} from 'react';
-import CompletedInvestmentTable from './subcomponent/CompletedInvestmentTable';
+import PendingWithdrawalTable from './subcomponent/PendingWithdrawalTable';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import axios from 'axios';
 import {useSelector} from 'react-redux';
 import Preloader from '../Preloader';
 import url from '../url';
 
-const CompletedInvestment = () => {
+const PendingWithdrawal= () => {
     const [loading, setLoading] = useState(false);
-    const [investmentdata, setInvestmentdata] = useState([]);
+    const [withdrawaldata, setwithdrawaldata] = useState([]);
     const [nexturl, setNexturl] = useState('');
 
     //======USER GLOBAL STATE FROM REDUX
@@ -18,7 +18,7 @@ const CompletedInvestment = () => {
     const loadActiveInvestmentData = () => {
         setLoading(true);
         axios
-            .get(`${url}/api/admin/investment/list/completed`, {
+            .get(`${url}/api/admin/withdrawal/list/pending`, {
                 headers: {
                     Authorization: `Bearer ${user}`,
                     'Content-Type': 'application/json',
@@ -26,8 +26,8 @@ const CompletedInvestment = () => {
                 }
             })
             .then(res => {
-                setInvestmentdata(res.data.investments.data);
-                setNexturl(res.data.investments.next_page_url);
+                setwithdrawaldata(res.data.withdrawals.data);
+                setNexturl(res.data.withdrawals.next_page_url);
                 console.log('data', res);
                 setLoading(false);
             })
@@ -49,8 +49,8 @@ const CompletedInvestment = () => {
                 }
             })
             .then(res => {
-                setNexturl(res.data.investments.next_page_url);
-                setInvestmentdata(investmentdata.concat(...res.data.investments.data) );
+                setNexturl(res.data.withdrawals.next_page_url);
+                setwithdrawaldata(withdrawaldata.concat(...res.data.withdrawals.data) );
             });
     };
 
@@ -62,25 +62,24 @@ const CompletedInvestment = () => {
             {loading && <Preloader />}
             <div class="pt-5">
                 <div class="card my-card-look">
-                    <div class="card-header my-card-head my-card-head-text">Completed Investmwnt</div>
+                    <div class="card-header my-card-head my-card-head-text">Active Investmwnt</div>
                     <div class="card-body">
                         <div class="table-responsive">
                             <table class="table table-bordered">
                                 <thead>
                                     <tr>
                                         <th scope="col">Code</th>
-                                        <th scope="col">Package</th>
-                                        <th scope="col">ROI</th>
+                                        <th scope="col">Status</th>
                                         <th scope="col">Amount</th>
                                         <th scope="col">Created At</th>
                                     </tr>
                                 </thead>
 
-                                <tbody>{investmentdata.map(data => <CompletedInvestmentTable data={data} />)}</tbody>
+                                <tbody>{withdrawaldata.map(data => <PendingWithdrawalTable data={data} />)}</tbody>
                                 <InfiniteScroll
-                                    dataLength={investmentdata.length}
+                                    dataLength={withdrawaldata.length}
                                     next={nextData}
-                                    hasMore={investmentdata.current_page === investmentdata.last_page ? true : false}
+                                    hasMore={withdrawaldata.current_page === withdrawaldata.last_page ? true : false}
                                     endMessage={<p style={{textAlign: 'center'}} />}
                                 />
                             </table>
@@ -92,4 +91,4 @@ const CompletedInvestment = () => {
     );
 };
 
-export default CompletedInvestment;
+export default PendingWithdrawal;

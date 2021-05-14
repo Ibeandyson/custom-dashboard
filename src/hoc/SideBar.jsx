@@ -1,8 +1,8 @@
 import './Styles/SideBar.css';
-import {FaTachometerAlt, FaRegMoneyBillAlt , FaUserLock, FaUserTie, FaCog, FaUserSlash} from 'react-icons/fa';
+import {FaTachometerAlt, FaRegMoneyBillAlt ,  FaUserTie, FaCog, FaUserSlash} from 'react-icons/fa';
 import {ImUsers, ImUserPlus} from 'react-icons/im';
 import {GiReceiveMoney, GiPayMoney} from "react-icons/gi"
-import {GrMoney} from "react-icons/gr"
+
 
 const SideBar = () => {
     return (
@@ -22,10 +22,6 @@ const SideBar = () => {
                         <span className="side-link-text">Pending Users</span>
                     </div>
                     <div className="side-link-container">
-                        <FaUserLock style={{fontSize: '1em', marginRight: '10px', color: '#ffffff'}} />
-                        <span className="side-link-text">Blocked Users</span>
-                    </div>
-                    <div className="side-link-container">
                         <ImUserPlus style={{fontSize: '1em', marginRight: '10px', color: '#ffffff'}} />
                         <span className="side-link-text">Add Use</span>
                     </div>
@@ -39,11 +35,15 @@ const SideBar = () => {
                     </div>
                     <div className="side-link-container">
                         <FaRegMoneyBillAlt style={{fontSize: '1em', marginRight: '10px', color: '#ffffff'}} />
-                        <span className="side-link-text">Withdrawal</span>
+                        <span className="side-link-text">Pending Withdrawal</span>
                     </div>
                     <div className="side-link-container">
-                        <FaUserTie style={{fontSize: '1em', marginRight: '10px', color: '#ffffff'}} />
-                        <span className="side-link-text">Profile</span>
+                        <FaRegMoneyBillAlt style={{fontSize: '1em', marginRight: '10px', color: '#ffffff'}} />
+                        <span className="side-link-text">Completed Withdrawal</span>
+                    </div>
+                    <div className="side-link-container">
+                        <FaRegMoneyBillAlt style={{fontSize: '1em', marginRight: '10px', color: '#ffffff'}} />
+                        <span className="side-link-text">Failed Withdrawal</span>
                     </div>
                     <div className="side-link-container">
                         <FaCog style={{fontSize: '1em', marginRight: '10px', color: '#ffffff'}} />
