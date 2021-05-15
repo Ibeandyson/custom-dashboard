@@ -8,14 +8,14 @@ import {Provider} from 'react-redux';
 import store from './Redux/store';
 import "./App.css"
 
-function App() {
+function App(props) {
     return (
         <div className="App">
              <Provider store={store}>
             <Router>
                 <Switch>
-                    <Route exact path="/" component={Login} />
-                    <PrivateRoute path="/admin_dashboard" component={DadboardComponents} />
+                    <Route exact path="/" component={Login} {...props}/>
+                    <PrivateRoute path="/admin_dashboard" component={DadboardComponents} {...props} />
                     <Route component={Page404} />
                 </Switch>
             </Router>
