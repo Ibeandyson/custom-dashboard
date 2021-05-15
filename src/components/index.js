@@ -15,3 +15,4 @@ export {default as CompletedDeposit} from './CompletedDeposit';
 export {default as FailedDeposit} from './FailedDeposit';
 export {default as PendingUsers} from './PendingUsers';
 export {default as DeclinedUsers} from './DeclinedUsers';
+export {default as MemberForm} from './MemberForm';

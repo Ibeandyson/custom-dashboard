@@ -1,7 +1,7 @@
 import './App.css';
 import {Header, PageViewer, SideBar} from './hoc/index';
 
-function Components() {
+function  DashboardComponents() {
     return (
         <div>
             <Header />
@@ -17,4 +17,4 @@ function Components() {
     );
 }
 
-export default Components;
+export default DashboardComponents;

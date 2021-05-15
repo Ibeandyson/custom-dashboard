@@ -10,7 +10,8 @@ import {
     CompletedDepositPage,
     FailedDepositPage,
     PendingUsersPage,
-    DeclinedUsersPage
+    DeclinedUsersPage,
+    MemberFormPage
 } from '../pages/index';
 import PrivateRoute from '../PrivateRoute';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
@@ -21,8 +22,7 @@ const PageViewer = () => {
         <div className="container-fluid mt-5">
             <Router>
                 <Switch>
-                    <PrivateRoute exact path="/admin_dashboard/dashboard_overview" component={DashBoardPage} />
-                    <PrivateRoute exact path="/admin_dashboard/add_user" component={AddUser} />
+                    <PrivateRoute  path="/admin_dashboard/dashboard_overview" component={DashBoardPage}/>
                     <PrivateRoute exact path="/admin_dashboard/active_investment" component={ActiveInvestmentPage} />
                     <PrivateRoute
                         exact
@@ -35,32 +35,13 @@ const PageViewer = () => {
                         path="/admin_dashboard/completed_withdrawal"
                         component={CompletedWithdrawalPage}
                     />
-                    <PrivateRoute
-                        exact
-                        path="/admin_dashboard/failed_withdrawal"
-                        component={FailedWithdralPage}
-                    />
-                     <PrivateRoute
-                        exact
-                        path="/admin_dashboard/completed_deposit"
-                        component={ CompletedDepositPage}
-                    />
-                     <PrivateRoute
-                        exact
-                        path="/admin_dashboard/failed_deposit"
-                        component={FailedDepositPage}
-                    />
-                     <PrivateRoute
-                        exact
-                        path="/admin_dashboard/pending_users"
-                        component={PendingUsersPage}
-                    />
-                     <PrivateRoute
-                        exact
-                        path="/admin_dashboard/declined_users"
-                        component={DeclinedUsersPage}
-                    />
-                   
+                    <PrivateRoute exact path="/admin_dashboard/failed_withdrawal" component={FailedWithdralPage} />
+                    <PrivateRoute exact path="/admin_dashboard/completed_deposit" component={CompletedDepositPage} />
+                    <PrivateRoute exact path="/admin_dashboard/failed_deposit" component={FailedDepositPage} />
+                    <PrivateRoute exact path="/admin_dashboard/pending_users" component={PendingUsersPage} />
+                    <PrivateRoute exact path="/admin_dashboard/declined_users" component={DeclinedUsersPage} />
+                    <PrivateRoute exact path="/admin_dashboard/member_form" component={MemberFormPage} />
+
                     <PrivateRoute exact path="/admin_dashboard/active_users" component={ActiveUsersPage} />
                     <Route component={Page404} />
                 </Switch>
