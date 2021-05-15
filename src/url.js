@@ -1,3 +1,3 @@
-const url = 'https://idealpeoplecorp.com';
+const url = 'add your api domain here';
 
 module.exports = url;
