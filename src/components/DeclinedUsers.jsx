@@ -18,7 +18,7 @@ const DeclinedUsers = () => {
     const loadData = () => {
         setLoading(true);
         axios
-            .get(`${url}/api/admin/member/list/pending`, {
+            .get(`${url}/api/admin/member/list/declined`, {
                 headers: {
                     Authorization: `Bearer ${user}`,
                     'Content-Type': 'application/json',

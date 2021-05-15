@@ -22,6 +22,10 @@ const SideBar = () => {
                         <span className="side-link-text">Pending Users</span>
                     </div>
                     <div className="side-link-container">
+                        <FaUserSlash style={{fontSize: '1em', marginRight: '10px', color: '#ffffff'}} />
+                        <span className="side-link-text">Declined Users</span>
+                    </div>
+                    <div className="side-link-container">
                         <ImUserPlus style={{fontSize: '1em', marginRight: '10px', color: '#ffffff'}} />
                         <span className="side-link-text">Add Use</span>
                     </div>

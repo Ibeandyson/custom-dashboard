@@ -4,16 +4,11 @@ import Preloader from '../../Preloader';
 import url from '../../url';
 import axios from 'axios';
 import {useSelector} from 'react-redux';
-import SnackBar from '../../SnackBar';
+
 
 const PendingWithdrawalTable = props => {
     const [loading, setLoading] = useState(false);
-    const [snack, setsnack] = useState({
-        view: false,
-        type: '',
-        message: ''
-    });
-
+    
     //======USER GLOBAL STATE FROM REDUX
     const userSignin = useSelector(state => state.userSignin);
     const {user} = userSignin;
