@@ -6,8 +6,7 @@ import {useSelector} from 'react-redux';
 import Preloader from '../Preloader';
 import url from '../url';
 
-
-const   DeclinedUsers = () => {
+const DeclinedUsers = () => {
     const [loading, setLoading] = useState(false);
     const [membersdata, setmembersdata] = useState([]);
     const [nexturl, setNexturl] = useState('');
@@ -51,7 +50,7 @@ const   DeclinedUsers = () => {
             })
             .then(res => {
                 setNexturl(res.data.members.next_page_url);
-                setmembersdata(membersdata.concat(...res.data.members.data) );
+                setmembersdata(membersdata.concat(...res.data.members.data));
             });
     };
 
@@ -70,14 +69,16 @@ const   DeclinedUsers = () => {
                                 <thead>
                                     <tr>
                                         <th scope="col">Code</th>
+                                        <th scope="col">Name</th>
                                         <th scope="col">Status</th>
-                                        <th scope="col">Amount</th>
                                         <th scope="col">Created At</th>
                                         <th scope="col">Action</th>
                                     </tr>
                                 </thead>
 
-                                <tbody>{membersdata.map(data => <DeclinedUserTable  data={data} loadData={loadData} />)}</tbody>
+                                <tbody>
+                                    {membersdata.map(data => <DeclinedUserTable data={data} loadData={loadData} />)}
+                                </tbody>
                                 <InfiniteScroll
                                     dataLength={membersdata.length}
                                     next={nextData}
