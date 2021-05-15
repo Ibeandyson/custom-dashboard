@@ -4,10 +4,14 @@
     position: fixed;
     width: 17vw;
     background-color: rgb(47, 151, 47);
-    z-index: inherit;
+    z-index: 200000;
+    
 }
 .side-card-body {
     margin-top: 50%;
+    margin-bottom: 20%;
+    overflow-y: scroll;
+   
 }
 .side-link-container {
     margin-bottom: 30px;

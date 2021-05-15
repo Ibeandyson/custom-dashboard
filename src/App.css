@@ -21,3 +21,6 @@
   transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
 }
+.my-header{
+  z-index: 300000!important;
+}

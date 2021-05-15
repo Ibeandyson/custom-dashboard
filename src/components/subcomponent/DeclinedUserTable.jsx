@@ -1,6 +1,5 @@
-import {useState} from 'react';
 import Moment from 'react-moment';
-const ActiveUsersTable = (props) => {
+const DeclinedUsersTable = (props) => {
     return (
         <tr>
         <td style={{fontSize: '0.7em'}}>{props.data.code}</td>
@@ -67,4 +66,4 @@ const ActiveUsersTable = (props) => {
     );
 };
 
-export default ActiveUsersTable;
+export default DeclinedUsersTable;

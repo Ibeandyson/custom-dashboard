@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react';
-import ActiveUsersTable from './subcomponent/ActiveUsersTable';
+import DeclinedUserTable from './subcomponent/DeclinedUserTable';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import axios from 'axios';
 import {useSelector} from 'react-redux';
@@ -7,7 +7,7 @@ import Preloader from '../Preloader';
 import url from '../url';
 
 
-const ActiveUsers = () => {
+const   DeclinedUsers = () => {
     const [loading, setLoading] = useState(false);
     const [membersdata, setmembersdata] = useState([]);
     const [nexturl, setNexturl] = useState('');
@@ -19,7 +19,7 @@ const ActiveUsers = () => {
     const loadData = () => {
         setLoading(true);
         axios
-            .get(`${url}/api/admin/member/list/approved`, {
+            .get(`${url}/api/admin/member/list/pending`, {
                 headers: {
                     Authorization: `Bearer ${user}`,
                     'Content-Type': 'application/json',
@@ -63,7 +63,7 @@ const ActiveUsers = () => {
             {loading && <Preloader />}
             <div class="pt-5">
                 <div class="card my-card-look">
-                    <div class="card-header my-card-head my-card-head-text">Active Users</div>
+                    <div class="card-header my-card-head my-card-head-text">Declined Users</div>
                     <div class="card-body">
                         <div class="table-responsive">
                             <table class="table table-bordered">
@@ -77,7 +77,7 @@ const ActiveUsers = () => {
                                     </tr>
                                 </thead>
 
-                                <tbody>{membersdata.map(data => <ActiveUsersTable  data={data} loadData={loadData} />)}</tbody>
+                                <tbody>{membersdata.map(data => <DeclinedUserTable  data={data} loadData={loadData} />)}</tbody>
                                 <InfiniteScroll
                                     dataLength={membersdata.length}
                                     next={nextData}
@@ -93,4 +93,4 @@ const ActiveUsers = () => {
     );
 };
 
-export default ActiveUsers;
+export default DeclinedUsers;

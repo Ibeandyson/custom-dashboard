@@ -2,7 +2,7 @@ import Logo from '../asset/log.png';
 const Header = () => {
     return (
         <div>
-            <nav className="navbar fixed-top  justify-content-between" style={{backgroundColor: '#ffffff'}}>
+            <nav className="navbar fixed-top my-header  justify-content-between" style={{backgroundColor: '#ffffff'}}>
                 {/* <a className="navbar-brand" style={{ backgroundColor: "#ffffff", height: '60px', width: "60px", borderRadius: "50px"}}>
                     <img src={Logo} style={{height: '50px'}} alt="log" />
                 </a> */}

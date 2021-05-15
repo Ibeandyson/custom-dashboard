@@ -46,6 +46,16 @@ const SideBar = () => {
                         <span className="side-link-text">Failed Withdrawal</span>
                     </div>
                     <div className="side-link-container">
+                        <FaRegMoneyBillAlt style={{fontSize: '1em', marginRight: '10px', color: '#ffffff'}} />
+                        <span className="side-link-text">Completed Deposit</span>
+                    </div>
+                    
+                    <div className="side-link-container">
+                        <FaRegMoneyBillAlt style={{fontSize: '1em', marginRight: '10px', color: '#ffffff'}} />
+                        <span className="side-link-text">Failed Deposit</span>
+                    </div>
+                    
+                    <div className="side-link-container">
                         <FaCog style={{fontSize: '1em', marginRight: '10px', color: '#ffffff'}} />
                         <span className="side-link-text">Settings</span>
                     </div>
