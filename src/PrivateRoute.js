@@ -10,7 +10,7 @@ import Cookie from "js-cookie";
 				Cookie.get('user') ? (
 					<Component {...props} />
 				) : (
-					<Redirect to="/"
+					<Redirect to="/login"
 					/>
 				)
 			}

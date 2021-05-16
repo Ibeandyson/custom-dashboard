@@ -10,3 +10,5 @@ export {default as FailedDeposit} from './FailedDeposit';
 export {default as PendingUsers} from './PendingUsers';
 export {default as DeclinedUsers} from './DeclinedUsers';
 export {default as MemberForm} from './MemberForm';
+export {default as SetPackage} from './SetPackage';
+export {default as Package} from './Package';

@@ -10,3 +10,5 @@ export {default as FailedDepositPage} from "./FailedDepositPage"
 export {default as PendingUsersPage} from "./PendingUsersPage"
 export {default as DeclinedUsersPage} from "./DeclinedUsersPage"
 export {default as MemberFormPage} from "./MemberFormPage"
+export {default as SettingsPage} from "./SettingsPage"
+

@@ -2,13 +2,17 @@ import {useState, useEffect} from 'react';
 import {useSelector} from 'react-redux';
 import axios from 'axios';
 import url from '../url';
+import Preloader from '../Preloader'
 
 const DashBoardPage = () => {
     const [data, setdata] = useState();
+    const [loading, setLoading] = useState(false);
+
     //======USER GLOBAL STATE FROM REDUX
     const userSignin = useSelector(state => state.userSignin);
     const {user} = userSignin;
     const loadData = () => {
+        setLoading(true);
         axios
             .get(`${url}/api/admin/table-stats`, {
                 headers: {
@@ -19,6 +23,7 @@ const DashBoardPage = () => {
             })
             .then(res => {
                 setdata(res.data.table_stats);
+                setLoading(false);
             })
             .catch(error => {
                 console.log(error);
@@ -30,6 +35,7 @@ const DashBoardPage = () => {
     }, []);
     return (
         <div className="pt-5 container-fluid">
+             {loading && <Preloader/>}
             <div className="row">
                 <div className="col-xs-12 col-md-6 col-lg-4 py-2 px-2">
                     <div class="card border-0">
@@ -126,7 +132,7 @@ const DashBoardPage = () => {
                     <div class="card border-0">
                         <div class="card-body">
                             <h5 class="card-title" style={{fontSize: '0.8em', fontWeight: 'bolder'}}>
-                                failed Withdrawal
+                                Failed Withdrawal
                             </h5>
                             <p class=" text-center" style={{fontSize: '2em', fontWeight: 'bolder'}}>
                                 {data && data.failed_withdrawal_count}

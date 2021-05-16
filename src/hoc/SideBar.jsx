@@ -8,90 +8,87 @@ const SideBar = props => {
         <div>
             <div className="card side-bar-card shadow border-0">
                 <div className="side-card-body">
-                    <div className="side-link-container">
-                        <a href="/admin_dashboard/dashboard_overview">
+                    <a href="/admin_dashboard/dashboard_overview">
+                        <div className="side-link-container">
                             <FaTachometerAlt style={{fontSize: '1em', marginRight: '10px', color: '#ffffff'}} />
                             <span className="side-link-text">DashBoard</span>
-                        </a>
-                    </div>
-                    <div className="side-link-container">
-                        <a href="/admin_dashboard/active_users">
+                        </div>
+                    </a>
+                    <a href="/admin_dashboard/active_users">
+                        <div className="side-link-container">
                             <ImUsers style={{fontSize: '1em', marginRight: '10px', color: '#ffffff'}} />
                             <span className="side-link-text">Active Users</span>
-                        </a>
-                    </div>
-                    <div className="side-link-container">
-                        <a href="/admin_dashboard/pending_users">
+                        </div>
+                    </a>
+                    <a href="/admin_dashboard/pending_users">
+                        <div className="side-link-container">
                             <FaUserSlash style={{fontSize: '1em', marginRight: '10px', color: '#ffffff'}} />
                             <span className="side-link-text">Pending Users</span>
-                        </a>
-                    </div>
-                    <div className="side-link-container">
-                        <a href="/admin_dashboard/declined_users">
+                        </div>
+                    </a>
+                    <a href="/admin_dashboard/declined_users">
+                        <div className="side-link-container">
                             <FaUserSlash style={{fontSize: '1em', marginRight: '10px', color: '#ffffff'}} />
                             <span className="side-link-text">Declined Users</span>
-                        </a>
-                    </div>
-                    <div className="side-link-container">
-                        <a href="/admin_dashboard/member_form">
+                        </div>
+                    </a>
+                    <a href="/admin_dashboard/member_form">
+                        <div className="side-link-container">
                             <ImUserPlus style={{fontSize: '1em', marginRight: '10px', color: '#ffffff'}} />
                             <span className="side-link-text">Add Use</span>
-                        </a>
-                    </div>
-                    <div className="side-link-container">
-                        <a href="/admin_dashboard/active_investment">
+                        </div>
+                    </a>
+                    <a href="/admin_dashboard/active_investment">
+                        <div className="side-link-container">
                             <GiPayMoney style={{fontSize: '1em', marginRight: '10px', color: '#ffffff'}} />
                             <span className="side-link-text">Active Investment</span>
-                        </a>
-                    </div>
-                    <div className="side-link-container">
-                        <a href="/admin_dashboard/completed_investment">
+                        </div>
+                    </a>
+                    <a href="/admin_dashboard/completed_investment">
+                        <div className="side-link-container">
                             <GiReceiveMoney style={{fontSize: '1em', marginRight: '10px', color: '#ffffff'}} />
                             <span className="side-link-text">Compeleted Investment</span>
-                        </a>
-                    </div>
-                    <div className="side-link-container">
-                        <a href="/admin_dashboard/pending_withdrawal">
+                        </div>
+                    </a>
+                    <a href="/admin_dashboard/pending_withdrawal">
+                        <div className="side-link-container">
                             <FaRegMoneyBillAlt style={{fontSize: '1em', marginRight: '10px', color: '#ffffff'}} />
                             <span className="side-link-text">Pending Withdrawal</span>
-                        </a>
-                    </div>
-                    <div className="side-link-container">
-                        <a href="/admin_dashboard/completed_withdrawal">
+                        </div>
+                    </a>
+                    <a href="/admin_dashboard/completed_withdrawal">
+                        <div className="side-link-container">
                             <FaRegMoneyBillAlt style={{fontSize: '1em', marginRight: '10px', color: '#ffffff'}} />
                             <span className="side-link-text">Completed Withdrawal</span>
-                        </a>
-                    </div>
-                    <div className="side-link-container">
-                        <a href="/admin_dashboard/failed_withdrawal">
+                        </div>
+                    </a>
+                    <a href="/admin_dashboard/failed_withdrawal">
+                        <div className="side-link-container">
                             <FaRegMoneyBillAlt style={{fontSize: '1em', marginRight: '10px', color: '#ffffff'}} />
                             <span className="side-link-text">Failed Withdrawal</span>
-                        </a>
-                    </div>
-                    <div className="side-link-container">
-                        <a href="/admin_dashboard/completed_deposit">
+                        </div>
+                    </a>
+                    <a href="/admin_dashboard/completed_deposit">
+                        <div className="side-link-container">
                             <FaRegMoneyBillAlt style={{fontSize: '1em', marginRight: '10px', color: '#ffffff'}} />
                             <span className="side-link-text">Completed Deposit</span>
-                        </a>
-                    </div>
-
-                    <div className="side-link-container">
-                        <a href="/admin_dashboard/failed_deposit">
+                        </div>
+                    </a>
+                    <a href="/admin_dashboard/failed_deposit">
+                        <div className="side-link-container">
                             <FaRegMoneyBillAlt style={{fontSize: '1em', marginRight: '10px', color: '#ffffff'}} />
                             <span className="side-link-text">Failed Deposit</span>
-                        </a>
-                    </div>
-
+                        </div>
+                    </a>
+                    <a href="/admin_dashboard/settings">
                     <div className="side-link-container">
-                        <a href="/admin_dashboard/completed_deposit">
+                      
                             <FaCog style={{fontSize: '1em', marginRight: '10px', color: '#ffffff'}} />
                             <span className="side-link-text">Settings</span>
-                        </a>
                     </div>
+                    </a>
                 </div>
             </div>
-
-           
         </div>
     );
 };

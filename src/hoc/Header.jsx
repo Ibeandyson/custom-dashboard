@@ -1,18 +1,26 @@
 import Logo from '../asset/log.png';
-import {GrMenu} from 'react-icons/gr'
-import {useState, useEffect} from "react"
+import {GrMenu} from 'react-icons/gr';
+import {useState} from 'react';
+import Cookie from "js-cookie";
+
 const Header = () => {
-    const [mobile, setmobile] = useState("0")
-    const openNav  = () => {
-        setmobile("250px")
-        console.log("with" ,mobile)
-      }
-      
-      function closeNav() {
-        setmobile("0")
-      }
-      console.log("with" ,mobile)
-    
+    const [mobile, setmobile] = useState('0');
+    const openNav = () => {
+        setmobile('250px');
+        console.log('with', mobile);
+    };
+
+    function closeNav() {
+        setmobile('0');
+    }
+    console.log('with', mobile);
+
+    //===LOGOUT===
+    const logout = () => {
+        Cookie.remove('user');
+        window.location.reload();
+    };
+
     return (
         <div>
             <nav className="navbar fixed-top my-header  justify-content-between" style={{backgroundColor: '#ffffff'}}>
@@ -23,16 +31,19 @@ const Header = () => {
                     <h5 style={{fontSize: '0.9em', fontWeight: 'bolder', paddingLeft: '40px'}}>Admin</h5>
                 </a>
 
-                <button  className="btn btn-sm btn-danger my-2 my-sm-0" type="submit">
+                <button onClick={() => logout()} className="btn btn-sm btn-danger my-2 my-sm-0" type="submit">
                     Logout
                 </button>
-                <div class="d-lg-none d-xs-block d-md-block" >
-                <GrMenu style={{fontSize: '1em', marginRight: '10px',  color: '#ffffff'}}  onClick={()=> openNav()}/>
+                <div class="d-lg-none d-xs-block d-md-block">
+                    <GrMenu
+                        style={{fontSize: '1em', marginRight: '10px', color: '#ffffff'}}
+                        onClick={() => openNav()}
+                    />
                 </div>
             </nav>
 
             {/* =========== mobile ======= */}
-            <div style={{width: mobile, zIndex: "100000000"}} id="mySidenav" class="sidenav">
+            <div style={{width: mobile, zIndex: '100000000'}} id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onClick={() => closeNav()}>
                     &times;
                 </a>

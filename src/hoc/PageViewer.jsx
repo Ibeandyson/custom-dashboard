@@ -11,7 +11,8 @@ import {
     FailedDepositPage,
     PendingUsersPage,
     DeclinedUsersPage,
-    MemberFormPage
+    MemberFormPage, 
+    SettingsPage
 } from '../pages/index';
 import PrivateRoute from '../PrivateRoute';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
@@ -43,6 +44,7 @@ const PageViewer = () => {
                     <PrivateRoute exact path="/admin_dashboard/member_form" component={MemberFormPage} />
 
                     <PrivateRoute exact path="/admin_dashboard/active_users" component={ActiveUsersPage} />
+                    <PrivateRoute exact path="/admin_dashboard/settings" component={SettingsPage} />
                     <Route component={Page404} />
                 </Switch>
             </Router>
