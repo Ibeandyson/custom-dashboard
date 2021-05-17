@@ -1,5 +1,5 @@
 import './Styles/SideBar.css';
-import {FaTachometerAlt, FaRegMoneyBillAlt, FaCog, FaUserSlash} from 'react-icons/fa';
+import {FaTachometerAlt,FaUserTimes, FaRegMoneyBillAlt, FaCog, FaUserSlash} from 'react-icons/fa';
 import {ImUsers, ImUserPlus} from 'react-icons/im';
 import {GiReceiveMoney, GiPayMoney} from 'react-icons/gi';
 
@@ -28,7 +28,7 @@ const SideBar = props => {
                     </a>
                     <a href="/admin_dashboard/declined_users">
                         <div className="side-link-container">
-                            <FaUserSlash style={{fontSize: '1em', marginRight: '10px', color: '#ffffff'}} />
+                            <FaUserTimes style={{fontSize: '1em', marginRight: '10px', color: '#ffffff'}} />
                             <span className="side-link-text">Declined Users</span>
                         </div>
                     </a>
