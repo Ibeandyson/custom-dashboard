@@ -1,9 +1,8 @@
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
 import axios from 'axios';
 import {useSelector} from 'react-redux';
 import Preloader from '../Preloader';
 import url from '../url';
-import {set} from 'js-cookie';
 
 const SetPackage = () => {
     const [formdata, setformdata] = useState({
@@ -145,7 +144,6 @@ const SetPackage = () => {
                         <div className="pt-3" style={{float: 'right'}}>
                             <button
                                 type="button"
-                                onClick={() => onSubmitHandle()}
                                 className="btn btn-success btn-sm"
                                 onClick={onSubmitHandle}>
                                 Create

@@ -111,7 +111,7 @@ const Header = () => {
                 </div>
 
                 <div className="side-link-container">
-                    <a href="/admin_dashboard/completed_deposit">
+                    <a href="/admin_dashboard/settings">
                         <span className="side-link-text">Settings</span>
                     </a>
                 </div>
