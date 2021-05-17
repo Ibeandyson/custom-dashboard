@@ -86,6 +86,7 @@ const Login = props => {
     );
 };
 
+
 const styles = {
     formError: {
         fontSize: '0.7em',
@@ -94,5 +95,4 @@ const styles = {
         fontWeight: 'bold'
     }
 };
-
 export default Login;

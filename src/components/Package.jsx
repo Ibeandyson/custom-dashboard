@@ -1,6 +1,5 @@
 import {useState, useEffect} from 'react';
 import PackageTable from './subcomponent/PackageTable';
-import InfiniteScroll from 'react-infinite-scroll-component';
 import axios from 'axios';
 import {useSelector} from 'react-redux';
 import Preloader from '../Preloader';
