@@ -24,7 +24,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "build:zip": "react-scripts build && cd build && zip -r -X ../adminBuild$npm_package_version.zip .",
+    "zip": "react-scripts build && cd build && zip -r -X ../adminBuild$npm_package_version.zip .",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
