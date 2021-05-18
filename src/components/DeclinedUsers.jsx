@@ -152,13 +152,12 @@ const DeclinedUsers = () => {
                         <img
                           src={
                             modal.profile_image === null
-                              ? "https://i.pinimg.com/736x/3f/94/70/3f9470b34a8e3f526dbdb022f9f19cf7.jpg"
-                              : modal.profile_image
+                              ? `${url}/images/misc/default_avatar.png`
+                              : `${url}/images/profile/${modal.profile_image}`
                           }
                           style={{
-                            height: "60px",
-                            width: "60px",
-                            borderRadius: "50px",
+                            height: "200px",
+                            width: "200px",
                           }}
                         />
                       </div>
@@ -253,18 +252,6 @@ const DeclinedUsers = () => {
                           style={{ fontSize: "0.7em", fontWeight: "bold" }}
                           className="mr-3"
                         >
-                          Available Balance:
-                        </span>
-                        <span style={{ fontSize: "0.7em" }} className="">
-                          {modal.available_balance}
-                        </span>
-                      </div>
-                      <hr />
-                      <div>
-                        <span
-                          style={{ fontSize: "0.7em", fontWeight: "bold" }}
-                          className="mr-3"
-                        >
                           Employment Status:
                         </span>
                         <span style={{ fontSize: "0.7em" }} className="">
@@ -280,7 +267,7 @@ const DeclinedUsers = () => {
                           State:
                         </span>
                         <span style={{ fontSize: "0.7em" }} className="">
-                          {modal.state_code}
+                          {modal.state_name}
                         </span>
                       </div>
                       <hr />
@@ -289,10 +276,10 @@ const DeclinedUsers = () => {
                           style={{ fontSize: "0.7em", fontWeight: "bold" }}
                           className="mr-3"
                         >
-                          State:
+                          Lga:
                         </span>
                         <span style={{ fontSize: "0.7em" }} className="">
-                          {modal.state_code}
+                          {modal.lga_name}
                         </span>
                       </div>
                       <hr />
@@ -316,11 +303,14 @@ const DeclinedUsers = () => {
                           Identification File:
                         </p>
                         <img
-                          src={modal.identification_image}
+                          src={
+                            modal.identification_image === null
+                              ? `${url}/images/misc/default_avatar.png`
+                              : `${url}/images/indentification/${modal.identification_image}`
+                          }
                           style={{ height: "100%", width: "100%" }}
                         />
                       </div>
-                      <hr />
                     </div>
                   </div>
                 </div>

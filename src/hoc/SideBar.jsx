@@ -35,7 +35,7 @@ const SideBar = props => {
                     <a href="/admin_dashboard/member_form">
                         <div className="side-link-container">
                             <ImUserPlus style={{fontSize: '1em', marginRight: '10px', color: '#ffffff'}} />
-                            <span className="side-link-text">Add Use</span>
+                            <span className="side-link-text">Add User</span>
                         </div>
                     </a>
                     <a href="/admin_dashboard/active_investment">

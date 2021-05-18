@@ -83,8 +83,8 @@ const ActiveInvestment = () => {
                                         <tr>
                                             <td style={{fontSize: '0.7em'}}>{data.code}</td>
                                             <td style={{fontSize: '0.7em'}}>{data.package_name}</td>
-                                            <td style={{fontSize: '0.7em'}}>{data.roi}</td>
-                                            <td style={{fontSize: '0.7em'}}>{data.amount}</td>
+                                            <td style={{fontSize: '0.7em'}}>₦{data.roi}</td>
+                                            <td style={{fontSize: '0.7em'}}>₦{data.amount}</td>
                                             <td style={{fontSize: '0.7em'}}>
                                                 <Moment format="YYYY/MM/DD">{data.created_at}</Moment>
                                             </td>

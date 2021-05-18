@@ -324,7 +324,7 @@ const PendingUsers = () => {
                           Available Balance:
                         </span>
                         <span style={{ fontSize: "0.7em" }} className="">
-                          {modal.available_balance}
+                        ₦{modal.available_balance}
                         </span>
                       </div>
                       <hr />
