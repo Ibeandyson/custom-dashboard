@@ -1,4 +1,4 @@
-import Logo from '../asset/log.png';
+// import Logo from '../asset/log.png';
 import {GrMenu} from 'react-icons/gr';
 import {useState} from 'react';
 import Cookie from "js-cookie";
