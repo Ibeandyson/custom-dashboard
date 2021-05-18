@@ -130,7 +130,7 @@ const PendingUsers = () => {
                 <tbody>
                   {membersdata.map((data) => (
                     <tr>
-                      <td style={{ fontSize: "0.7em" }}>{data.code}</td>
+                      <td style={{ fontSize: "0.7em" }}>{data.padded_id}</td>
                       <td style={{ fontSize: "0.7em" }}>
                         {data.first_name} {data.last_name} {data.midlde_name}
                       </td>
@@ -324,7 +324,7 @@ const PendingUsers = () => {
                           Available Balance:
                         </span>
                         <span style={{ fontSize: "0.7em" }} className="">
-                        ₦{modal.available_balance}
+                          ₦{modal.available_balance}
                         </span>
                       </div>
                       <hr />

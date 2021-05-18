@@ -24,6 +24,9 @@ const SetPackage = () => {
     const onChangeHandler = e => {
         setformdata({...formdata, [e.target.name]: e.target.value});
     };
+    
+   
+
     const onSubmitHandle = () => {
         setLoading(true);
         axios
@@ -46,8 +49,8 @@ const SetPackage = () => {
             )
             .then(res => {
                 setsucess(true);
-
                 setLoading(false);
+                window.location.reload();
             })
             .catch(error => {
                 console.log(error.response.data);

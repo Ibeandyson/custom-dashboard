@@ -82,7 +82,7 @@ const DeclinedUsers = () => {
                 <tbody>
                   {membersdata.map((data) => (
                     <tr>
-                      <td style={{ fontSize: "0.7em" }}>{data.code}</td>
+                      <td style={{ fontSize: "0.7em" }}>{data.padded_id}</td>
                       <td style={{ fontSize: "0.7em" }}>
                         {data.first_name} {data.last_name} {data.midlde_name}
                       </td>
