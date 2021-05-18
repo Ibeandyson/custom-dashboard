@@ -266,7 +266,7 @@ const MemberForm = () => {
                   {errorBag && <p class="text-danger">{errorBag.phone}</p>}
                 </div>
                 <div class="col-xs-12 col-md-4 pt-3">
-                  <p class="my-membarship-signup-text">Date</p>
+                  <p class="my-membarship-signup-text">Date of Birth</p>
                   <input
                     class="form-control form-control-sm "
                     type="date"
