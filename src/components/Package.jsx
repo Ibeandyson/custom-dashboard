@@ -137,7 +137,7 @@ const Package = () => {
                                     <tr>
                                         <th scope="col">Name</th>
                                         <th scope="col">Duration</th>
-                                        <th scope="col">ROI</th>
+                                        <th scope="col">ROI(%)</th>
                                         <th scope="col">Max Amount</th>
                                         <th scope="col">Min Amoumt</th>
                                         <th scope="col">Status</th>
@@ -150,9 +150,9 @@ const Package = () => {
                                         <tr>
                                             <td style={{fontSize: '0.7em'}}>{data.name}</td>
                                             <td style={{fontSize: '0.7em'}}>{data.duration}</td>
-                                            <td style={{fontSize: '0.7em'}}>{data.roi_percent}</td>
-                                            <td style={{fontSize: '0.7em'}}>{data.max_amount}</td>
-                                            <td style={{fontSize: '0.7em'}}>{data.min_amount}</td>
+                                            <td style={{fontSize: '0.7em'}}>{data.roi_percent}%</td>
+                                            <td style={{fontSize: '0.7em'}}>₦{data.max_amount}</td>
+                                            <td style={{fontSize: '0.7em'}}>₦{data.min_amount}</td>
                                             <td style={{fontSize: '0.7em'}}>
                                                 {data.active === true ? (
                                                     <span class="badge badge-success">Active</span>

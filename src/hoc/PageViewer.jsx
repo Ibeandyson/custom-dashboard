@@ -1,6 +1,5 @@
 import {
     DashBoardPage,
-    AddUser,
     ActiveInvestmentPage,
     CompletedInvestmentPage,
     PendingWithdrawPage,

@@ -63,7 +63,7 @@ const ActiveInvestment = () => {
             {loading && <Preloader />}
             <div class="pt-5">
                 <div class="card my-card-look">
-                    <div class="card-header my-card-head my-card-head-text">Active Investmwnt</div>
+                    <div class="card-header my-card-head my-card-head-text">Active Investment</div>
                     <div class="card-body">
                         <div class="table-responsive">
                             <table class="table table-bordered">
@@ -83,8 +83,8 @@ const ActiveInvestment = () => {
                                         <tr>
                                             <td style={{fontSize: '0.7em'}}>{data.code}</td>
                                             <td style={{fontSize: '0.7em'}}>{data.package_name}</td>
-                                            <td style={{fontSize: '0.7em'}}>{data.roi}</td>
-                                            <td style={{fontSize: '0.7em'}}>{data.amount}</td>
+                                            <td style={{fontSize: '0.7em'}}>₦{data.roi}</td>
+                                            <td style={{fontSize: '0.7em'}}>₦{data.amount}</td>
                                             <td style={{fontSize: '0.7em'}}>
                                                 <Moment format="YYYY/MM/DD">{data.created_at}</Moment>
                                             </td>

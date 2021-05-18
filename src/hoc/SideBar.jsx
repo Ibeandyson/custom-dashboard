@@ -1,5 +1,5 @@
 import './Styles/SideBar.css';
-import {FaTachometerAlt, FaRegMoneyBillAlt, FaCog, FaUserSlash} from 'react-icons/fa';
+import {FaTachometerAlt,FaUserTimes, FaRegMoneyBillAlt, FaCog} from 'react-icons/fa';
 import {ImUsers, ImUserPlus} from 'react-icons/im';
 import {GiReceiveMoney, GiPayMoney} from 'react-icons/gi';
 
@@ -22,20 +22,20 @@ const SideBar = props => {
                     </a>
                     <a href="/admin_dashboard/pending_users">
                         <div className="side-link-container">
-                            <FaUserSlash style={{fontSize: '1em', marginRight: '10px', color: '#ffffff'}} />
+                            <FaTachometerAlt style={{fontSize: '1em', marginRight: '10px', color: '#ffffff'}} />
                             <span className="side-link-text">Pending Users</span>
                         </div>
                     </a>
                     <a href="/admin_dashboard/declined_users">
                         <div className="side-link-container">
-                            <FaUserSlash style={{fontSize: '1em', marginRight: '10px', color: '#ffffff'}} />
+                            <FaUserTimes style={{fontSize: '1em', marginRight: '10px', color: '#ffffff'}} />
                             <span className="side-link-text">Declined Users</span>
                         </div>
                     </a>
                     <a href="/admin_dashboard/member_form">
                         <div className="side-link-container">
                             <ImUserPlus style={{fontSize: '1em', marginRight: '10px', color: '#ffffff'}} />
-                            <span className="side-link-text">Add Use</span>
+                            <span className="side-link-text">Add User</span>
                         </div>
                     </a>
                     <a href="/admin_dashboard/active_investment">

@@ -47,9 +47,8 @@
   color: #818181;
   display: block;
   transition: 0.3s;
-  font-size: 0.7em;
+  font-size: 0.85em;
   font-weight: bold;
-  margin-bottom: 10px;
 }
 
 .sidenav a:hover {
