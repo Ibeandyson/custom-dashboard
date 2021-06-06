@@ -1,9 +1,9 @@
-import Logo from '../asset/log.png';
 import {signin} from '../Redux/actions';
 import {useState, useEffect} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import Preloader from '../Preloader';
 import Cookie from 'js-cookie';
+import url from "../url";
 
 const Login = props => {
     const dispatch = useDispatch();
@@ -45,7 +45,7 @@ const Login = props => {
                    <div className="container pt-5" style={{maxWidth: '500px', margin: 'auto', marginTop: '5%'}}>
                    <div className="text-center pb-5">
                        <img
-                           src={Logo}
+                           src={`${url}/images/misc/logo.png`}
                            style={{height: '90px', width: '90px', borderRadius: '50px', backgroundColor: '#ffffff'}}
                        />
                    </div>
