@@ -14,6 +14,12 @@ const SideBar = props => {
                             <span className="side-link-text">DashBoard</span>
                         </div>
                     </a>
+                    <a href="/admin_dashboard/sub_admins">
+                        <div className="side-link-container">
+                            <ImUsers style={{fontSize: '1em', marginRight: '10px', color: '#ffffff'}} />
+                            <span className="side-link-text">Sub Admins</span>
+                        </div>
+                    </a>
                     <a href="/admin_dashboard/active_users">
                         <div className="side-link-container">
                             <ImUsers style={{fontSize: '1em', marginRight: '10px', color: '#ffffff'}} />
