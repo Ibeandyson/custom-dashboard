@@ -88,6 +88,14 @@ const Header = () => {
           </a>
         </div>
         <div className="side-link-container">
+          <a href="/admin_dashboard/sub_admins">
+            <ImUsers
+              style={{ fontSize: "1em", marginRight: "10px", color: "#ffffff" }}
+            />
+            <span className="side-link-text">Sub Admins</span>
+          </a>
+        </div>
+        <div className="side-link-container">
           <a href="/admin_dashboard/active_users">
             <ImUsers
               style={{ fontSize: "1em", marginRight: "10px", color: "#ffffff" }}

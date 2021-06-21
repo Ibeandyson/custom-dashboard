@@ -12,3 +12,5 @@ export {default as DeclinedUsers} from './DeclinedUsers';
 export {default as MemberForm} from './MemberForm';
 export {default as SetPackage} from './SetPackage';
 export {default as Package} from './Package';
+export {default as NewAdminForm} from './NewAdminForm';
+export {default as SubAdminList} from './SubAdminList';

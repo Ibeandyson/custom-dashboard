@@ -77,7 +77,7 @@ const NewAdminForm = () => {
         <form action="action" method="post" autoComplete="off">
           <div class="card my-card-look">
             <div class="card-header my-card-head my-card-head-text">
-              Create New Admin
+              Create New Sub Admin
             </div>
             <div class="card-body">
               <div class="row">
