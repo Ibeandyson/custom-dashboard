@@ -224,9 +224,10 @@ const PendingUsers = () => {
                               : modal.profile_image
                           }
                           style={{
-                            height: "60px",
-                            width: "60px",
-                            borderRadius: "50px",
+                            height: "250px",
+                            width: "300px",
+                            backgroundSize: "cover",
+                            borderRadius: "10px",
                           }}
                         />
                       </div>
@@ -264,7 +265,7 @@ const PendingUsers = () => {
                           DOB:
                         </span>
                         <span style={{ fontSize: "0.7em" }} className="">
-                          {modal.DOB}
+                        <Moment format="YYYY/MM/DD">{modal.dob}</Moment>
                         </span>
                       </div>
                       <hr />
@@ -385,7 +386,7 @@ const PendingUsers = () => {
                         </p>
                         <img
                           src={modal.identification_image}
-                          style={{ height: "100%", width: "100%" }}
+                          style={{ height: "320px", width: "100%" }}
                         />
                       </div>
                       <hr />

@@ -157,9 +157,10 @@ const ActiveUsers = () => {
                               : `${url}/images/profile/${modal.profile_image}`
                           }
                           style={{
-                            height: "60px",
-                            width: "60px",
-                            borderRadius: "50px",
+                            height: "250px",
+                            width: "300px",
+                            backgroundSize: "cover",
+                            borderRadius: "10px",
                           }}
                         />
                       </div>
@@ -197,7 +198,7 @@ const ActiveUsers = () => {
                           DOB:
                         </span>
                         <span style={{ fontSize: "0.7em" }} className="">
-                          {modal.DOB}
+                        <Moment format="YYYY/MM/DD">{modal.dob}</Moment>
                         </span>
                       </div>
                       <hr />
@@ -320,9 +321,9 @@ const ActiveUsers = () => {
                           src={
                             modal.identification_image === null
                               ? `${url}/images/misc/default_avatar.png`
-                              : `${url}/images/indentification/${modal.identification_image}`
+                              : `${url}/images/identification/${modal.identification_image}`
                           }
-                          style={{ height: "100%", width: "100%" }}
+                          style={{ height: "320px", width: "100%" }}
                         />
                       </div>
                     </div>
