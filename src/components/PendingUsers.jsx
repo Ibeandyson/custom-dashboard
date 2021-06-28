@@ -301,7 +301,8 @@ const PendingUsers = () => {
                           Gender:
                         </span>
                         <span style={{ fontSize: "0.7em" }} className="">
-                          {modal.gender}
+                          {modal.gender==='M'&&"Male"}
+                          {modal.gender==='F'&&"Female"}
                         </span>
                       </div>
                       <hr />
